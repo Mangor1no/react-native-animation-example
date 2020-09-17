@@ -1,13 +1,24 @@
+const prettier = require('./.prettierrc.js');
+
 module.exports = {
   root: true,
+  parser: 'babel-eslint',
   extends: [
-    '@react-native-community',
-    'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended',
+    '@react-native-community',
+    'airbnb',
+    'prettier',
+    'prettier/react',
   ],
   plugins: ['prettier', 'import'],
   rules: {
+    'react/jsx-filename-extension': [
+      'warn',
+      {
+        extensions: ['.js', '.jsx', '.json', '.native.js'],
+      },
+    ],
+    'prettier/prettier': ['error', prettier],
     'react/display-name': 0,
     'react/no-unused-prop-types': 2,
     'react/no-unused-state': 2,

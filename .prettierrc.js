@@ -1,5 +1,5 @@
 module.exports = {
-  parser: 'babel',
+  printWidth: 100,
   bracketSpacing: true,
   jsxBracketSameLine: false,
   singleQuote: true,
